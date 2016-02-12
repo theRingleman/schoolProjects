@@ -1,0 +1,42 @@
+div {
+  height: 100px;
+  width: 100px;
+  
+}
+
+.middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.topRight {
+  border-bottom: solid 1px black;
+}
+
+.topLeft {
+  border-bottom: solid black 1px;
+}
+
+.bottomRight {
+  border-top: solid black 1px;
+}
+
+.bottomLeft {
+  border-top:solid black 1px;
+}
+
+#topMiddle {
+  border-bottom: solid black 1px;
+}
+
+#bottomMiddle {
+  border-top: solid black 1px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}

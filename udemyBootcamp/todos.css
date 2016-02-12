@@ -1,0 +1,19 @@
+li {
+  border: 2px solid red;
+}
+
+#special {
+  background: yellow;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
