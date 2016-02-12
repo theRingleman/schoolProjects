@@ -59,3 +59,5 @@ function max2(arr){
   })
   return max;
 }
+
+//I am adding a comment here for git test
