@@ -61,3 +61,4 @@ function max2(arr){
 }
 
 //I am adding a comment here for git test
+//again this is all for a test
