@@ -22,18 +22,14 @@ var movies = [
 ];
 
 for(var i = 0; i < movies.length; i++){
-  var stuff = "You have ";
-  if(movies[i].haveSeen) {
-    stuff += "watched ";
-  } else {
-    stuff += "not seen ";
-  }
-  stuff += "\"" + movies[i].title + "\" - ";
-  stuff += movies[i].rating;
-  console.log(stuff);
+  console.log(buildString(movies[i]));
 };
 
 movies.forEach(function(movies){
+  console.log(buildString(movies))
+});
+
+function buildString(movies){
   var result = "You have ";
   if(movies.haveSeen){
     result += "watched ";
@@ -42,5 +38,5 @@ movies.forEach(function(movies){
   }
   result += "\"" + movies.title + "\" - ";
   result += movies.rating;
-  console.log(result);
-});
+  return result;
+}
