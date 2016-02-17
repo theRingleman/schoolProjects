@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dating Site</title>
+  <link rel="stylesheet" href="dating.css">
+</head>
+<body>
+  
+  <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+  <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+
+    <fieldset>
+      <legend>Your Face</legend>
+      <label for="image">Your image:</label>
+      <input type="file" id="image">
+      <br>
+      <label for="preview">Image preview:</label>
+      <img src="" id="preview">
+    </fieldset>
+
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your full name" required>
+      <br>
+      <label class="auto" for="gender">Gender:</label>
+      <input type="radio" id="gender" name="gender" required value="Male">Male
+      <input type="radio" id="gender" name="gender" required value="Female">Female
+      <br>
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+      <br>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday">
+      <br>
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color">
+      <br>
+      <label for="country">Which country:</label>
+      <select name="country" id="country">
+        <option value="no selection"></option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <option value="China">China</option>
+        <option value="Russia">Russia</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Indicators</legend>
+      <label for="height">Height:</label>
+      <span class="left">Short</span><input type="range" min="0" max="100" step="5" value="50"><span class="right">Tall</span>
+      <br>
+      <label for="salary">Salary:</label>
+      <span class="left">Poor</span> <input type="range" min="0" max="100" step="5" value="50"><span class="right">Rich</span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email">Email:</label>
+      <input type="email" required>
+      <br>
+      <label for="phone">Mobile:</label>
+      <input type="tel">
+      <br>
+      <label for="address">Address:</label>
+      <textarea name="address" id="address" rows="2"></textarea>
+      <br>
+      <label class="auto" for="contact">Methods to contact you:</label>
+      <input type="checkbox">Email <input type="checkbox">Whatsapp <input type="checkbox">In-app chat
+    </fieldset>
+    <input type="submit">
+  </form>
+
+</body>
+</html>
