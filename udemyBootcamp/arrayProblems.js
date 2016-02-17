@@ -3,7 +3,7 @@
 // prints out the elements in the array in reverse order HINT USE A LOOP
 
 function printReverse(array) {
-  var arrayLength = array.length
+  var arrayLength = array.length;
   for (var i = 0; i <= array.length; i++){
     console.log(array[arrayLength]);
     arrayLength--;
