@@ -1,0 +1,30 @@
+* {
+	border: 1px dashed blue;
+}
+
+div {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+body {
+	background-color: #fff;
+}
+
+#one {
+	background-color: red;
+}
+
+#two {
+	background-color: blue;
+}
+
+#three {
+	background-color: yellow;
+}
+
+#four {
+	background-color: green;	
+}
