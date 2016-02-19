@@ -18,8 +18,6 @@ for(var i = 0; i < modeBtns.length; i++){
   })
 }
 
-colorDisplay.textContent = pickedColor;
-
 resetButton.addEventListener("click", function(){
   reset();
 })
