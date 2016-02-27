@@ -23,8 +23,8 @@
       }
     };
 
-    function checkGuess() {
-      if(colors.indexOf(guess) === 0) {
+    function checkGuess(guess) {
+      if(colors.indexOf(guess) === -1) {
         alert("I dont recognize that color!");
       }else if(guess < winningColor) {
         alert("Your guess is alphabetically lower than mine.");
