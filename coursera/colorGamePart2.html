@@ -8,31 +8,41 @@
   <script>
     var colors = ["aqua", "black", "cadetblue", "crimson", "darkgreen", "deeppink", "gold",  "ivory", "lime", "maroon", "navy", "yellow"];
     var winningColor;
-    var guessCount = 0;
+    var guessCount = 1;
+    var gameover = false;
 
     doGame();
 
     function doGame(){
       var random = Math.floor(Math.random() * colors.length);
-      winningColor = colors[random];
       alert(winningColor);
       var guess = prompt("Im thinking of one of these colors: \n\n" + colors.join(", ") +  "\n\n What color am I thinking of?");
-      while(guess !== winningColor) {
-         var guess = prompt("Im thinking of one of these colors: \n\n" + colors.join(", ") +  "\n\n What color am I thinking of?");
-         checkGuess();
+      while(!gameover) {
+        checkGuess(guess);
+        if(!gameover){
+        guess = prompt("Im thinking of one of these colors: \n\n" + colors.join(", ") +  "\n\n What color am I thinking of?");
+        }
       }
     };
 
     function checkGuess(guess) {
+<<<<<<< HEAD
+=======
+      guessCount++;
+>>>>>>> 0dbef01e69a3de3ffba865c8f0258bdbc31dd710
       if(colors.indexOf(guess) === -1) {
         alert("I dont recognize that color!");
+        gameover = false;
       }else if(guess < winningColor) {
         alert("Your guess is alphabetically lower than mine.");
+        gameover = false;
       }else if(guess > winningColor){
         alert("Your guess is alphabetically higher than mine.");
+        gameover = false;
       }else {
-        alert("Congratulations!");
+        alert("Congratulations! \n\n" + "It took you " + guessCount + " tries!");
         document.querySelector("body").style.background = winningColor;
+        gameover = true;
       }
     }
   </script>
