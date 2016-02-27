@@ -128,3 +128,41 @@ function truncate(str, num) {
   //add in ...
   return newStr;
 }
+
+//takes in an array and returns the arrays data in a multidimensional array
+//in chunks that the user specifies
+function chunk(arr, size) {
+  // Break it up.
+  //create blank arr
+  var newArr = [];
+  var count = 1;
+  //for loop to cycle through arr and slice and push to new arr
+  for(var i = 0; i < arr.length; i += size){
+    newArr.push(arr.slice(i, (size * count)));
+    count++;
+  }
+  return newArr;
+}
+
+//Takes an arr and the returns the elements left over
+//after being chopped by the howMany amount
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  var newArr = arr.splice(0, howMany);
+  
+  return arr;
+}
+
+//Return true if the string in the first element of the array
+//contains all of the letters of the string in the second element of the array.
+function mutation(arr) {
+  var firstElm = arr[0].toLowerCase().split("");
+  var secondElm = arr[1].toLowerCase().split("");
+  
+  for(var i = 0; i < secondElm.length; i++){
+    if(firstElm.indexOf(secondElm[i]) === -1){
+      return false;
+    }
+  }
+  return true;
+}
