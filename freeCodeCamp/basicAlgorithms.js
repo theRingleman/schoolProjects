@@ -84,3 +84,47 @@ function largestOfFour(arr) {
   //return arr
   return nums;
 }
+
+//Checks if the last of the string is the same as the target
+//Returns true or false
+function end(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  //find length of target and use it in .substr
+  if(str.substr(target.length * -1) === target){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//Takes in any string and repeats it how ever many times you specified
+//Returns desired string
+function repeat(str, num) {
+  // repeat after me
+  var arr = [];
+  for (var i = 0; i < num; i++){
+    arr.push(str);
+  }
+  return arr.join("");
+}
+
+//Takes in a string and truncates it by the amount specified in num
+//if num is longer or equal to str then it returns the str, 
+//returns the truncated string
+function truncate(str, num) {
+  // Clear out that junk in your trunk
+  //declare var to store new str in
+  var newStr;
+  //if statement for num parameters
+  if(num === str.length || num > str.length){
+    return str;
+  }else if(num <= 3){
+    newStr = str.slice(0, num) + "...";
+  }else{
+    newStr = str.slice(0, (num - 3)) + "...";
+  }
+  //slice str by num minus three
+  //add in ...
+  return newStr;
+}
