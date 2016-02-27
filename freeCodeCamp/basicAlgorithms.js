@@ -166,3 +166,18 @@ function mutation(arr) {
   }
   return true;
 }
+
+//checks the array for any falsy statements, removes them, then returns the array 
+//without the falsy statements
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  var newArr = [];
+  function nope(val){
+    if(val !== false){
+      return val;
+    }
+  }
+  
+  newArr = arr.filter(nope);
+  return newArr;
+}
