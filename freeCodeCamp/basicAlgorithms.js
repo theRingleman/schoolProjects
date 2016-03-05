@@ -181,3 +181,36 @@ function bouncer(arr) {
   newArr = arr.filter(nope);
   return newArr;
 }
+
+//A giant pain in the ass
+function destroyer(arr) {
+  // Remove all the values
+  var elmToDestroy = [];
+  for(var i = 1; i < arguments.length; i++){
+    elmToDestroy.push(arguments[i]);
+  }
+  
+  var elmToSurvive = arguments[0].filter(function(element){
+    var toSurvive = true;
+    
+    for (var i = 0; i < elmToDestroy.length; i++){
+      if(element === elmToDestroy[i]){
+        toSurvive = false;
+      }
+    }
+    return toSurvive;
+  });
+  
+  return elmToSurvive;
+}
+
+//dont fully understand why this works because of the a-b
+function where(arr, num) {
+  // Find my place in this sorted array.
+  arr.push(num);
+  arr.sort(function(a,b){
+    return a - b;
+  });
+  return arr.indexOf(num);
+}
+where([5, 3, 20, 3], 5);
