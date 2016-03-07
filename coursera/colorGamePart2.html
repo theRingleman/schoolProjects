@@ -15,7 +15,7 @@
 
     function doGame(){
       var random = Math.floor(Math.random() * colors.length);
-      alert(winningColor);
+      winningColor = colors[random];
       var guess = prompt("Im thinking of one of these colors: \n\n" + colors.join(", ") +  "\n\n What color am I thinking of?");
       while(!gameover) {
         checkGuess(guess);
