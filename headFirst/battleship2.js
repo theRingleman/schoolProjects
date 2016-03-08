@@ -28,22 +28,20 @@ var model = {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
       var index = ship.locations.indexOf(guess);
-        if (ship.hits[index] === "hit") {
-          view.displayMessage("Oops, you already hit that location.");
-          return true;
-        } else if (index >= 0) {
-          ship.hits[index] = "hit";
-          view.displayHit(guess);
-          view.displayMessage("HIT!");
-        }
+      if (ship.hits[index] === "hit") {
+        view.displayMessage("Oops, you already hit that location!");
+        return true;
+      } else if (index >= 0) {
+        ship.hits[index] = "hit";
+        view.displayHit(guess);
+        view.displayMessage("HIT!");
 
         if (this.isSunk(ship)) {
-          this.shipsSunk++;
           view.displayMessage("You sank my battleship!");
+          this.shipsSunk++;
         }
-
-          return true;
-        }
+        return true;
+      }
     }
     view.displayMiss(guess);
     view.displayMessage("You missed.");
