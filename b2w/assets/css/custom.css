@@ -38,6 +38,15 @@ h4 {
   font-size: 18px;
 }
 
+a:link, a:visited {
+  color:#dd5638;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #c9302c;
+}
+
 button, input, .btn, a.btn {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -48,14 +57,77 @@ button, input, .btn, a.btn {
   font-weight: bold;
 }
 
+button.btn:focus {
+  outline: none !important;
+}
+
 .btn-danger {
   background-color: #dd5638;
   border-color: #d95131;
 }
 
+.btn-success {
+  background: #79b044;
+  border: none;
+}
+
+.btn-sucess:hover {
+  background: #6a9b3d;
+  border-color: #6a9b3d;
+}
+
 img {
   max-width: 100%;
 }
+
+.modal-content {
+  background: url('../img/tile.jpg') top left repeat;
+}
+
+.badge.social {
+  background: #ccc;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white;
+}
+
+.badge.social.twitter:hover {
+  background: #55acee;
+}
+
+.badge.social.facebook:hover {
+  background: #3b5998;
+}
+
+.badge.social.gplus:hover {
+  background: #db4b39;
+}
+
+blockquote {
+  padding: 0;
+  border: none;
+  font-style: italic;
+  text-align: left;
+}
+
+blockquote cite {
+  display: block;
+  color: #777;
+  margin: 15px 0 0 0;
+}
+
+blockquote:before {
+  display: none;
+}
+
 /* === Hero === */
 
 #hero {
@@ -124,6 +196,23 @@ img {
 }
 
 /* === Layout === */
+
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+}
+
+section h2 {
+  margin: 20px 0 40px;
+}
+
+section h3 {
+  margin: 30px 0 10px;
+}
+
 #optin {
   background: #3e4249;
   padding: 20px 0;
@@ -136,3 +225,136 @@ img {
 #optin p {
   margin: 7px 0 0 0;
 }
+
+#who-benefits {
+  background: white;
+}
+
+#course-features {
+  background: #3e4249;
+  color: white;
+  text-align: center;
+}
+
+#project-features {
+  text-align: center;
+}
+
+#featurette {
+  background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+  background-size: cover;
+  text-align: center; 
+  color: white;
+}
+
+#instructor {
+  background: white url('../img/brad-elvis.png') 90% -10px no-repeat;
+}
+
+#instructor h2 {
+  margin: 0 0 20px;
+}
+
+#instructor .num {
+  display: table;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  line-height: 24px;
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  background: #dd5638;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#instructor .num .num-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#instructor .num span {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#kudos {
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 60px;
+}
+
+.testimonial img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#signup {
+  text-align: center;
+  background: url('../img/hipster-stuff.jpg') center center repeat fixed;
+  background-size: cover;
+  color: white;
+  padding: 140px 0;
+}
+
+#signup h2 {
+  font-weight: normal;
+}
+
+#signup h2 strong {
+  border-bottom: solid 2px #dd5638;
+}
+
+#signup .btn {
+  font-size: 24px;
+}
+
+footer {
+  background: #3e4249;
+  color: white;
+  padding: 20px 0 10px;
+  font-size: 12px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a:link, footer a:visited {
+  color: white;
+}
+
+footer a:hover {
+  color: #dd5638;
+}
+
+footer li.signup-link a {
+  color: #dd5638;
+}
+
+footer li.signup-link a:hover {
+  font-weight: bold;
+}
+
+/* === Custom Icon Sprite === */
+i.ci {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url('../img/icon-sprite.png') no-repeat;
+}
+
+.ci.ci-computer   {background-position: 0 0;}
+.ci.ci-watch      {background-position: -40px 0;}
+.ci.ci-calendar   {background-position: -80px 0;}
+.ci.ci-community  {background-position: -120px 0;}
+.ci.ci-instructor {background-position: -160px 0;}
+.ci.ci-device     {background-position: -200px 0;}
