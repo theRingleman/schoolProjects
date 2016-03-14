@@ -214,6 +214,10 @@ section {
   padding: 80px 0;
 }
 
+section.main-content {
+  padding: 40px 0;
+}
+
 .section-header {
   text-align: center;
 }
@@ -386,7 +390,7 @@ footer li.signup-link a:hover {
 
 /* === Blog Styles === */
 
-.post, .widget {
+.post, .widget, #comments {
   position: relative;
   border: solid 1px #ddd;
   background: white;
@@ -398,7 +402,8 @@ footer li.signup-link a:hover {
 
 .post header,
 .post .post-excerpt,
-.post .post-body {
+.post .post-body,
+#comments .comments-wrap {
   padding: 20px;
 }
 
@@ -493,6 +498,55 @@ footer li.signup-link a:hover {
   background-color: #8bc653;
 }
 
+#comments h3 {
+  text-align: center;
+}
+
+#comments h4 {
+  font-size: 1.3em;
+}
+
+#comments ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments ol li {
+  background: rgba(0,0,0,0.02);
+  padding: 10px 20px;
+  margin: 10px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+#comments ol li li.childern {
+  padding: 0;
+  list-style: none;
+  font-size: 0.96em;
+}
+
+#leave-comment {
+  margin: 40px 0 0;
+  padding: 20px 0 0;
+  border-top: solid 1px #eee;
+
+}
+
+/* === Resources === */
+
+.resource {
+  width: 31.33333333%;
+  float: left;
+  margin: 0 3% 40px 0;
+}
+
+.resource:nth-child(3n) {
+  margin-right: 0;
+}
+
 /* === Custom Icon Sprite === */
 
 i.ci {
@@ -535,6 +589,35 @@ textarea {
   padding: 6px 12px;
 }
 
+input[type="submit"],
+button[type="submit"] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+input[type="submit"]:hover,
+button[type = "submit"]:hover {
+  outline: none;
+  border: none;
+  background: #aaa;
+}
+
 /* === Media Queries === */
 
 @media screen and ( max-width: 991px) {
@@ -556,6 +639,12 @@ textarea {
 
   #featurette iframe {
     height: 240px;
+  }
+
+  .resource {
+    width: 48%;
+    margin-right: 2%;
+    min-height: 800px;
   }
 }
 
@@ -580,5 +669,11 @@ textarea {
 
   #kudos blockquote {
     margin-top: 10px;
+  }
+
+  .resource {
+    width: 100%;
+    margin-right: 0;
+    min-height: 0;
   }
 }
