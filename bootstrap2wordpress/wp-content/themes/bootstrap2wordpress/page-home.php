@@ -3,6 +3,13 @@
   Template Name: Home Page
 */
 
+// Custom Fields
+$prelaunch_price    = get_post_meta(4, 'prelaunch_price', true);
+$launch_price    = get_post_meta(4, 'launch_price', true);
+$final_price    = get_post_meta(4, 'final_price', true);
+$course_url    = get_post_meta(4, 'course_url', true);
+$button_text    = get_post_meta(4, 'button_text', true);
+
 get_header(); ?>
 
 <!-- HERO
@@ -15,23 +22,23 @@ get_header(); ?>
           <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-badge.png" alt="Bootstrap To WordPress" class="logo">
         </div> <!-- col -->
         <div class="col-sm-7 hero-text">
-          <h1>Bootsrap to WordPress</h1>
-          <p class="lead">Earn an extra $1k - $5k a month by learning to code your very own responsive &amp; custom WordPress websites with Bootstrap</p>
+          <h1><?php bloginfo('name'); ?></h1>
+          <p class="lead"><?php bloginfo('description'); ?></p>
           <div id="price-timeline">
             <div class="price active">
               <h4>Pre-Launch Price <small>Ends Soon!</small></h4>
-              <span>$149</span>
+              <span><?php echo $prelaunch_price; ?></span>
             </div> <!-- price -->
             <div class="price">
               <h4>Launch Price <small>Coming Soon!</small></h4>
-              <span>$299</span>
+              <span><?php echo $launch_price; ?></span>
             </div> <!-- price -->
             <div class="price">
               <h4>FInal Price <small>Coming Soon!</small></h4>
-              <span>$399</span>
+              <span><?php echo $final_price; ?></span>
             </div><!-- price -->
           </div> <!-- price-timeline -->
-            <p><a href="#" class="btn btn-lg btn-danger" role="button">Enroll &raquo;</a></p>
+            <p><a href="<?php echo $course_url; ?>" class="btn btn-lg btn-danger" role="button"><?php echo $button_text; ?></a></p>
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- container -->
