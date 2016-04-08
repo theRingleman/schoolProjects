@@ -4,24 +4,25 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package bootstrap2wordpress
+ * @package Bootstrap_to_WordPress
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+
 
 		<?php
 		if ( have_posts() ) : ?>
+		<section class="feature-image feature-image-default-alt" data-type="background" data-speed="3">
+			 <?php
+				 the_archive_title( '<h1 class="page-title">', '</h1>' );
+				 the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			 ?>
+		</section>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
+			<div class="container">
+				<div class="row" id="primary">
+					<main id="content" class="col-sm-8">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -44,8 +45,14 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+
+		<div class="col-sm-4">
+			<?php get_sidebar(); ?>
+		</div>
+
 	</div><!-- #primary -->
+</div>
+
 
 <?php
-get_sidebar();
 get_footer();
